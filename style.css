@@ -1,0 +1,110 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  background: url('https://images.unsplash.com/photo-1666397852239-17f07470b4a7?w=1200&q=80&auto=format&fit=crop') no-repeat center center/cover;
+}
+
+.quote-section {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 80px;
+
+}
+
+#quote-timer {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 0 rgb(75, 150, 171);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 8px 4px rgba(0, 198, 255, 0.1);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 198, 255, 0);
+  }
+}
+
+.pulse-element {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.quotacontainer {
+  margin-top: -10%;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.main-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background-color: #00c6ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.quote-card {
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.quote-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #aad8ff;
+}
